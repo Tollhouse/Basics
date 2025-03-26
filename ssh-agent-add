@@ -1,0 +1,6 @@
+#!/bin/bash
+
+ssh-agent
+
+ssh-add ~/.ssh/toll
+
