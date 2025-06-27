@@ -2,9 +2,19 @@ import subprocess
 import os
 import random
 
+vids = []
+
 def videotime():
-    vid = random.choice(os.listdir("/home/toll/Videos/Videos"))
-    os.system("/bin/vlc /home/toll/Videos/Videos/"+vid)
+    return random.choice(os.listdir("/home/toll/Videos/memes"))
+
+def play(vids):
+    for vid in vids:
+        os.system("/bin/vlc /home/toll/Videos/memes/"+vid+" -L --fullscreen")
 
 for _ in range(10):  
-    videotime()
+    vid = videotime()
+    if vid not in vids:
+        print(vid)
+        vids.append(vid)
+
+play(vids)
