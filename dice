@@ -1,0 +1,7 @@
+import random
+
+def main():
+	out = random.randint(1,6)
+	print(out)
+
+main()
